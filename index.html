@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Assignment 2</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 20px;
+      }
+      h1 {
+        margin-bottom: 20px;
+      }
+      p,
+      ul,
+      ol {
+        text-align: left;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Assignment 2</h1>
+    <p>
+      <a href="javascript:void(0);" onclick="showExample('example1')"
+        >Example 1</a
+      >
+      |
+      <a href="javascript:void(0);" onclick="showExample('example2')"
+        >Example 2</a
+      >
+    </p>
+
+    <div id="example1">
+      <h2>Example 1</h2>
+      <p>
+        <strong>How Much data is collected every minute of the day?</strong>
+      </p>
+      <p>
+        <strong>Source:</strong>
+        <a
+          href="https://www.forbes.com/sites/nicolemartin1/2019/08/07/how-much-data-is-collected-every-minute-of-the-day/?sh=e63102d3d66f"
+          >Forbes</a
+        >
+      </p>
+      <img
+        src="https://imageio.forbes.com/blogs-images/nicolemartin1/files/2019/08/Domo.jpg?format=jpg&width=1440"
+        alt="Chart"
+      />
+      <p><strong>What the chart represents?</strong></p>
+      <p>
+        A graph from a 2017 Forbes article titled “How Much Data Is Collected
+        Every Minute of the Day?” attempts to showcase the intensity of internet
+        usage across the globe. What is interesting about the chart is that it
+        quantifies human interaction with the internet via many social media and
+        utility platforms at a minute resolution. The chart also indicates the
+        growth of the internet population over the years at the bottom.
+      </p>
+      <p><strong>Idiom Issue:</strong></p>
+      <p>
+        The choice of chart isn't appropriate for this representation for
+        several reasons:
+      </p>
+      <ol>
+        <li>
+          Misleading Channels: At first glance, the chart seems to have five
+          channels (name, logo, annotations, pie quadrant, and color), but in
+          reality, it only contains two informative channels (Internet
+          applications and value count).
+        </li>
+        <li>
+          Failure to Convey Data Trends: The chart fails to clearly convey the
+          intensity of the data utilized or the trends in data consumption.
+        </li>
+      </ol>
+      <p><strong>Misleading Elements:</strong></p>
+      <ul>
+        <li>Arbitrary use of logos.</li>
+        <li>Irregular font sizes.</li>
+        <li>Colors that don't categorize similar media types.</li>
+        <li>Size of pie quadrants not related to data.</li>
+        <li>High ink-to-information ratio.</li>
+      </ul>
+      <p><strong>Data issue:</strong></p>
+      <ul>
+        <li>
+          The value count for all nominal data is unique and non-comparable. For
+          example, how can a user compare the number of Tinder swipes with Uber
+          rides?
+        </li>
+      </ul>
+      <p><strong>Suggestion:</strong></p>
+      <ul>
+        <li>
+          For an apple-to-apple comparison, the data used could be standardized
+          to bytes of information transferred each minute.
+        </li>
+        <li>
+          Categorizing apps into common groups such as Entertainment, Social,
+          Productivity, and Finance, etc.
+        </li>
+        <li>
+          Finally, a simple line graph or grouped bar graph representing the
+          trends in internet usage, with internet population on one axis and
+          average data (in units of bytes) per minute on another axis, would be
+          better. Coloring the categories could aid in better readability as
+          well.
+        </li>
+      </ul>
+    </div>
+
+    <div id="example2">
+      <h2>Example 2</h2>
+      <p><strong>Carbon emission in London</strong></p>
+      <p>
+        <strong>Source:</strong>
+        <a href="https://www.behance.net/praveen74403">Praveen Govindarajan</a>
+      </p>
+      <!-- Image source is not specified, replace this with the actual image source -->
+      <img src="02.jpg" alt="Chart" />
+      <p><strong>What the chart represents?</strong></p>
+      <p>
+        A data visualization of London's 2019 carbon emissions from different
+        land uses, self-made for my master's thesis. The Mayor of London
+        provides a dataset pertaining to emissions from various sources such as
+        coal, gas, and other sources for land use types residential, commercial,
+        and industrial for every fixed square kilometer. This visualization
+        overlays all the emissions from various land use types by aggregating
+        the emissions from various sources. The radius of the circle maps the
+        aggregated value of emissions. The aim of this visualization is to
+        present users with information on which part of London emits the most
+        carbon.
+      </p>
+      <p><strong>Idiom Issue:</strong></p>
+      <p>
+        The representation is not intuitive, as there is no indication of how to
+        relate the size of the circles to the quantity of emissions. The choice
+        of visualization does not completely aid in objectively answering the
+        question of which part of London emits the most carbon. The legends and
+        grid information are too small for the screen. The base map consists
+        only of the road network of London. The data are visualized based on the
+        coordinates provided in the data directly.
+      </p>
+      <p><strong>Data issue:</strong></p>
+      <ul>
+        <li>
+          The missing data were not treated properly, which misleads that a few
+          pockets of the city are emission-free.
+        </li>
+      </ul>
+      <p><strong>Suggestion:</strong></p>
+      <ul>
+        <li>
+          Emissions for each planning boundary could have been estimated to
+          scientifically infer which zone emits the most carbon.
+        </li>
+        <li>
+          A pie chart within each planning boundary indicating which land use
+          category emits the most carbon would have been useful.
+        </li>
+        <li>Disclose missing data.</li>
+      </ul>
+    </div>
+
+    <script>
+      document.getElementById("example2").style.display = "none"; // Hide Example 2 by default
+
+      function showExample(example) {
+        if (example === "example1") {
+          document.getElementById("example1").style.display = "block";
+          document.getElementById("example2").style.display = "none";
+        } else if (example === "example2") {
+          document.getElementById("example1").style.display = "none";
+          document.getElementById("example2").style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
